@@ -487,7 +487,12 @@ body .team{
 }
 .footer .container{
     display: flex;
-    gap: 70px;
+}
+.footer-first-box{
+    margin-right: 70px;
+}
+.footer-second-box{
+    margin-right: 93px;
 }
 .footer-text{
     font-weight: 700;
@@ -507,6 +512,52 @@ body .team{
 .footer .soc-items:hover,
 .footer .soc-items:focus{
     background-color: var(--acsent-color);
+}
+.footer .foot-form{
+    display: flex;
+    align-items: center;
+}
+.footer .form-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 28px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.footer .form-input[type="email"]{
+    display: flex;
+    width: 360px;
+    margin-right: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20/16);
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+    border-color: var(--bg-dark-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    outline: none;
+}
+.form-input[type="email"], textarea{
+    background-color: transparent;
+}
+.foot-form input::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20/16);
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+.form-btn-ico{
+    fill: var(--white-color);
+    margin-left: 10px;
 }
 /*            Портфоліо          */
 /* Фільтри */
@@ -611,7 +662,7 @@ body .team{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    padding: 8px;
+    padding: 40px;
 
     background: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -641,5 +692,148 @@ body .team{
     cursor: pointer;
 }
 .close-ico{
-    fill: currentColor;
+    transition: fill 250ms var(--animation-preset);
 }
+.close-btn:hover .close-ico,
+.close-btn:focus .close-ico{
+    fill: var(--acsent-color);
+}
+.modal-title{
+    margin: 0;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.form-group{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    margin-bottom: 10px;
+}
+.form-group.feedback{
+    margin-bottom: 20px;
+}
+.form-group input{
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    padding-right: 12px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border 250ms var(--animation-preset);
+}
+.label-title{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    color: var(--second-color);
+
+    margin-bottom: 4px;
+}
+.form-ico{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms var(--animation-preset);
+}
+.form-group input:hover,
+.form-group input:focus-within{
+    border: 1px solid var(--acsent-color);
+}
+.form-group input:hover + .form-ico,
+.form-group input:focus-within + .form-ico{
+    fill: var(--acsent-color);
+}
+.form-group .form-feedback:hover,
+.form-group .form-feedback:focus-within{
+    border: 1px solid var(--acsent-color);
+}
+.form-feedback{
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    transition: border 250ms var(--animation-preset);
+}
+.form-feedback::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+.check-text{
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    color: var(--second-color);
+    margin-left: 23px;
+}
+.check-link{
+    text-decoration: underline;
+    color: var(--acsent-color);
+}
+.check-group{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.modal-btn{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding-left: 52px;
+    padding-right: 52px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.def-check{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+.check-ico{
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    transition: background-color 250ms var(--animation-preset), opacity 250ms var(--animation-preset);
+}
+.def-check:checked ~ .check-ico-group .check-ico{
+    border: none;
+    background-color: var(--acsent-color);
+}
+.def-check:not(:checked) ~ .check-ico-group use{
+    opacity: 0;
+}
+.check-ico-group{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
