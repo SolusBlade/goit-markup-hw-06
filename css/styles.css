@@ -544,7 +544,7 @@ body .team{
     border-radius: 4px;
     outline: none;
 }
-.form-input[type="email"], textarea{
+.form-input[type="email"]{
     background-color: transparent;
 }
 .foot-form input::placeholder{
