@@ -794,6 +794,7 @@ body .team{
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
     cursor: pointer;
 }
@@ -804,7 +805,6 @@ body .team{
     display: block;
     margin-right: auto;
     margin-left: auto;
-
 }
 .def-check{
     position: absolute;
@@ -832,7 +832,7 @@ body .team{
     position: absolute;
     display: flex;
     align-items: center;
-    left: 0;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
