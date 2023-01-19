@@ -44,7 +44,7 @@ body{
     line-height: 1.87;
     font-size: 16px;
     font-weight: 700;
-    transition: background-color 250ms var(--animation-preset);
+    transition: background-color 250ms var(--animation-preset), box-shadow 250ms var(--animation-preset);
 
     border-radius: 4px;
     padding: 10px 32px;
@@ -208,7 +208,9 @@ body{
 .hero .buttons{
     letter-spacing: 0.06em;
     line-height: 1.87;
-
+}
+.hero .buttons:hover,
+.hero .buttons:focus{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero .hero-title{
